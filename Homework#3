@@ -1,0 +1,222 @@
+Part1:
+# Prompt the user for how many numbers to sum
+num_count = int(input("How many numbers do you want to sum? "))
+
+# Initialize a variable to store the sum
+total = 0
+
+# Use a loop to input and sum the numbers
+for i in range(num_count):
+    num = float(input(f"Enter number {i + 1}: "))
+    total += num
+
+# Print the total sum
+print(f"The total sum of the {num_count} numbers is: {total}")
+
+Part2:
+# Prompt the user for how many numbers to average
+num_count = int(input("How many numbers do you want to average? "))
+
+# Initialize variables for sum and count
+total = 0
+count = 0
+
+# Use a loop to input and sum the numbers
+for i in range(num_count):
+    num = float(input(f"Enter number {i + 1}: "))
+    total += num
+    count += 1
+
+# Calculate the average
+average = total / count
+
+# Print the average as a float
+print(f"The average of the {num_count} numbers is: {average:.2f}")
+
+Part3:
+# Prompt the user for how many numbers to sum
+num_count = int(input("How many numbers do you want to sum? "))
+
+# Initialize a variable to store the sum
+total = 0
+
+# Use a loop to input and sum the numbers
+for i in range(num_count):
+    num = float(input(f"Enter number {i + 1}: "))
+    total += num
+
+# Print the total sum
+print(f"The total sum of the {num_count} numbers is: {total}")
+
+Part4:
+print("Part 4")
+print()
+print("The program starts by importing the graphics module and defining the main function.")
+print("It creates a graphics window named win using the GraphWin() constructor.")
+print("A red circle is created using the Circle class, with its center at (50, 50) and a radius of 20 units. The outline and fill color of the circle are set to red.")
+print("The circle is drawn on the graphics window win using the draw method.")
+print("A for loop runs 10 times, allowing the user to interact with the window.")
+print("Inside the loop, the program waits for the user to click anywhere inside the graphics window using win.getMouse(). This function pauses the program until the user clicks and returns the Point object representing the mouse click position, which is stored in the variable p.")
+print("The program calculates the change in X and Y coordinates (dx and dy) between the center of the circle (c) and the point where the mouse was clicked (p). This difference represents the amount by which the circle needs to be moved.")
+print("The shape.move(dx, dy) method is used to move the circle by the calculated dx and dy. This effectively repositions the circle to where the user clicked.")
+print("The loop continues, allowing the user to click again and move the circle repeatedly, up to 10 times.")
+print("After the loop finishes, the graphics window is closed using win.close(), and the program terminates.")
+print("So, this program creates an interactive window where the user can click to move a red circle. The circle follows the mouse cursor when clicked and moves to the clicked position. The window closes after the user has had the opportunity to interact with it 10 times.")
+
+Part5:
+import turtle
+
+# Create a turtle screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Create a turtle for drawing
+target = turtle.Turtle()
+target.speed(0)  # Set drawing speed to the maximum
+
+# Define colors
+colors = ["white", "black", "blue", "red", "yellow"]
+
+# Function to draw a single ring with the specified radius and color
+def draw_ring(radius, color):
+    target.penup()
+    target.goto(0, -radius)
+    target.pendown()
+    target.fillcolor(color)
+    target.begin_fill()
+    target.circle(radius)
+    target.end_fill()
+
+# Draw concentric rings
+ring_width = 20  # Width of each ring, same as the yellow circle's radius
+
+for i, color in enumerate(colors):
+    radius = 100 - i * ring_width  # Calculate radius for each ring
+    draw_ring(radius, color)
+
+# Close the drawing window on click
+screen.exitonclick()
+
+
+
+Part6:
+# Python program to draw smile
+# face emoji using turtle
+import turtle
+
+# turtle object
+pen = turtle.Turtle()
+
+# function for creation of eye
+def eye(col, rad):
+	pen.down()
+	pen.fillcolor(col)
+	pen.begin_fill()
+	pen.circle(rad)
+	pen.end_fill()
+	pen.up()
+
+
+# draw face
+pen.fillcolor('green')
+pen.begin_fill()
+pen.circle(100)
+pen.end_fill()
+pen.up()
+
+# draw eyes
+pen.goto(-40, 120)
+eye('red', 15)
+pen.goto(-37, 125)
+eye('black', 5)
+pen.goto(40, 120)
+eye('red', 15)
+pen.goto(40, 125)
+eye('black', 5)
+
+# draw nose
+pen.goto(0, 75)
+eye('black', 8)
+
+# draw mouth
+pen.goto(-40, 85)
+pen.down()
+pen.right(90)
+pen.circle(40, 180)
+pen.up()
+
+# draw tongue
+pen.goto(-10, 45)
+pen.down()
+pen.right(180)
+pen.fillcolor('red')
+pen.begin_fill()
+pen.circle(10, 180)
+pen.end_fill()
+pen.hideturtle()
+
+
+Part7:
+import turtle
+
+# Function to calculate the midpoint of two points
+def midpoint(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    mx = (x1 + x2) / 2
+    my = (y1 + y2) / 2
+    return (mx, my)
+
+# Function to calculate the length of a line segment
+def length(point1, point2):
+    dx = point2[0] - point1[0]
+    dy = point2[1] - point1[1]
+    return (dx**2 + dy**2)**0.5
+
+# Function to calculate the slope of a line segment
+def slope(point1, point2):
+    dx = point2[0] - point1[0]
+    dy = point2[1] - point1[1]
+    if dx == 0:
+        return float('inf')  # Vertical line, slope is infinity
+    else:
+        return dy / dx
+
+# Initialize the turtle screen
+window = turtle.Screen()
+window.title("Line Segment Information")
+
+# Create a turtle object
+pen = turtle.Turtle()
+
+# Get two mouse clicks for the end points of the line segment
+points = []
+for _ in range(2):
+    x, y = window.textinput("Input", "Enter the x and y coordinates separated by a space:").split()
+    x, y = float(x), float(y)
+    points.append((x, y))
+
+# Calculate the midpoint, length, and slope of the line
+mid = midpoint(points[0], points[1])
+line_length = length(points[0], points[1])
+line_slope = slope(points[0], points[1])
+
+# Draw the line
+pen.penup()
+pen.goto(points[0])
+pen.pendown()
+pen.goto(points[1])
+
+# Draw the midpoint in cyan
+pen.penup()
+pen.goto(mid)
+pen.pendown()
+pen.color("cyan")
+pen.dot(10)  # Adjust the dot size as needed
+
+# Print the length and slope of the line
+print(f"Length of the line: {line_length:.2f}")
+print(f"Slope of the line: {line_slope:.2f}")
+
+# Keep the window open until the user closes it
+turtle.done()
