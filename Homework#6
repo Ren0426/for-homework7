@@ -1,0 +1,98 @@
+Part1:
+print("In that they both let you deal with unforeseen circumstances in your code, exception handling using try and except is similar to managing exceptional cases using common decision structures like if statements. Although try and except blocks, as well as if statements, can be used to manage exceptional cases, exception handling is typically preferable for managing errors and exceptions that happen during runtime since it offers a systematic and extensible mechanism to handle unforeseen circumstances. Making conditional decisions based on predetermined circumstances is better suited for conventional decision structures.")
+
+Part2:
+your_score = float(input("Input your exam score: "))
+
+if 90 <= your_score <= 100:
+    grade = "A"
+elif 80 <= your_score <= 89:
+    grade = "B"
+elif 70 <= your_score <= 79:
+    grade = "C"
+elif 60 <= your_score <= 69:
+    grade = "D"
+else:
+    grade = "F"
+
+print("The corresponding grade is:", grade)
+
+Part3:
+
+started_hour = int(input("Enter the started hour as 24-hour format: "))
+started_min = int(input("Enter the started minute: "))
+end_hour = int(input("Enter the ended hour as 24-hour format: "))
+end_min = int(input("Enter the ended minute: "))
+
+start_time_min = started_hour * 60 + started_min
+end_time_min = end_hour * 60 + end_min
+
+total = 0
+
+if start_time_min < 21 * 60:
+    if end_time_min <= 21 * 60:
+        total += (end_time_min - start_time_min) * 2.50 / 60
+    else:
+        total += (21 * 60 - start_time_min) * 2.50 / 60
+        total += (end_time_min - 21 * 60) * 1.75 / 60
+else:
+    total += (end_time_min - start_time_min) * 1.75 / 60
+
+print("Your total bill is: $", format(total, ".2f"))
+
+Part4:
+
+age = int(input("Enter your age: "))
+citizenship = int(input("Enter how many years have you been a citizen: "))
+
+senate = age >= 30 and citizenship >= 9
+house = age >= 25 and citizenship >= 7
+
+if senate and house:
+    print("You are eligible for both the Senate and the House.")
+elif senate:
+    print("You are eligible only for the Senate.")
+elif house:
+    print("You are eligible only for the House.")
+else:
+    print("You are not eligible for either the Senate or the House.")
+
+Part5:
+def sumList(num):
+    try:
+        total = sum(num)
+        return total
+    except TypeError:
+        return "Error: List contains non-integer elements"
+    except ZeroDivisionError:
+        return "Error: List is empty"
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = sumList(numbers)
+print(f"The sum of the numbers is: {result}")
+
+The result:
+Python 3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+===== RESTART: /Users/suzukiren/Desktop/Computer science 1/CS1 HW6 part1.py ====
+In that they both let you deal with unforeseen circumstances in your code, exception handling using try and except is similar to managing exceptional cases using common decision structures like if statements. Although try and except blocks, as well as if statements, can be used to manage exceptional cases, exception handling is typically preferable for managing errors and exceptions that happen during runtime since it offers a systematic and extensible mechanism to handle unforeseen circumstances. Making conditional decisions based on predetermined circumstances is better suited for conventional decision structures.
+>>> 
+===== RESTART: /Users/suzukiren/Desktop/Computer science 1/CS1 HW6 part2.py ====
+Input your exam score: 95
+The corresponding grade is: A
+>>> 
+===== RESTART: /Users/suzukiren/Desktop/Computer science 1/CS1 HW6 part3.py ====
+Enter the started hour as 24-hour format: 19
+Enter the started minute: 00
+Enter the ended hour as 24-hour format: 23
+Enter the ended minute: 00
+Your total bill is: $ 8.50
+>>> 
+===== RESTART: /Users/suzukiren/Desktop/Computer science 1/CS1 HW6 part4.py ====
+Enter your age: 21
+Enter how many years have you been a citizen: 9
+You are not eligible for either the Senate or the House.
+>>> 
+===== RESTART: /Users/suzukiren/Desktop/Computer science 1/CS1 HW6 part5.py ====
+The sum of the numbers is: 55
