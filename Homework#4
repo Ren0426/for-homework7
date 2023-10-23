@@ -1,0 +1,212 @@
+Part1:
+print("The character at index 1 in the string 's1' can be accessed by the expression 'c'.")
+print("Python uses zero-based string indexing, so it will return the character at position two (index 1). The result will be 'p'.")
+
+print("s1[2] will access the character in the string's1' that is at index 2. The string's2' will be divided by s2[:2] up to but excluding index 2. As a result, the concatenation s1[2] + s2[:2] will combine the character from index 2 of's1' with the characters from's2' up to index 2. So, 'amni' will be the result.")
+
+print("The upper() function, which turns all of the characters in the string to uppercase, is applied to the string's1' by expression of g. Therefore, the result will be 'SPAM'.")
+
+Part2:
+s1 = "spam"
+s2 = "ni!"
+
+a = s2.upper()
+
+d = s1
+
+e = [s1[:2], s1[3]]
+
+
+Part3:
+print("b")
+for w in "Now is the winter of our discontent...".split():
+    print(w)
+
+print()
+
+print("c")
+for w in "Missisippi".split("i"):
+    print(w, end=" ")
+
+print()
+print()
+
+print("e")
+msg = ""
+for ch in "secret":
+    msg = msg + chr(ord(ch)+1)
+    print(msg)
+
+Part4:
+grades = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDCCCCCCCCCCBBBBBBBBBBAAAAAAAAAA"
+
+output = "grades = \""
+
+for i in range(60):
+    output += "F"
+
+for i in range(10):
+    output += "D"
+
+for i in range(10):
+    output += "C"
+
+for i in range(10):
+    output += "B"
+
+for i in range(10):
+    output += "A"
+
+print(output + "\"", end='')
+
+
+Part5:
+score = int(input("Enter the exam score: "))
+
+if 90 <= score <= 100:
+    grade = "A"
+elif 80 <= score <= 89:
+    grade = "B"
+elif 70 <= score <= 79:
+    grade = "C"
+elif 60 <= score <= 69:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"The grade for the score {score} is: {grade}")
+
+Part6:
+phrase = input("Enter a phrase: ")
+    
+words = phrase.split()  
+
+acronym = ""
+    
+for word in words:
+    if word:
+        acronym += word[0].upper()
+        
+    print(f"The acronym is: {acronym}")
+
+
+Part7:
+name = input("Enter your name: ").lower()
+
+numerology_value = 0
+
+name_values = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
+    'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19,
+    't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
+
+for letter in name:
+    if letter in name_values:
+        numerology_value += name_values[letter]
+
+print(f"The numerology value of the name '{name}' is: {numerology_value}")
+
+The result:
+
+Part 1
+print("The character at index 1 in the string 's1' can be accessed by the expression 'c'.")
+print("Python uses zero-based string indexing, so it will return the character at position two (index 1). The result will be 'p'.")
+
+print("s1[2] will access the character in the string's1' that is at index 2. The string's2' will be divided by s2[:2] up to but excluding index 2. As a result, the concatenation s1[2] + s2[:2] will combine the character from index 2 of's1' with the characters from's2' up to index 2. So, 'amni' will be the result.")
+
+print("The upper() function, which turns all of the characters in the string to uppercase, is applied to the string's1' by expression of g. Therefore, the result will be 'SPAM'.")
+
+part 2
+s1 = "spam"
+s2 = "ni!"
+
+a = s2.upper()
+
+d = s1
+
+e = [s1[:2], s1[3]]
+
+Part 3
+print("b")
+for w in "Now is the winter of our discontent...".split():
+    print(w)
+
+print()
+
+print("c")
+for w in "Missisippi".split("i"):
+    print(w, end=" ")
+
+print()
+print()
+
+print("e")
+msg = ""
+for ch in "secret":
+    msg = msg + chr(ord(ch)+1)
+    print(msg)
+
+Part 4
+grades = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDCCCCCCCCCCBBBBBBBBBBAAAAAAAAAA"
+
+output = "grades = \""
+
+for i in range(60):
+    output += "F"
+
+for i in range(10):
+    output += "D"
+
+for i in range(10):
+    output += "C"
+
+for i in range(10):
+    output += "B"
+
+for i in range(10):
+    output += "A"
+
+print(output + "\"", end='')
+
+Part 5
+score = int(input("Enter the exam score: "))
+
+if 90 <= score <= 100:
+    grade = "A"
+elif 80 <= score <= 89:
+    grade = "B"
+elif 70 <= score <= 79:
+    grade = "C"
+elif 60 <= score <= 69:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"The grade for the score {score} is: {grade}")
+
+Part 6
+phrase = input("Enter a phrase: ")
+
+words = phrase.split()
+
+acronym = ""
+
+for word in words:
+    if word:
+        acronym += word[0].upper()
+
+print(f"The acronym is: {acronym}")
+
+Part 7
+name = input("Enter your name: ").lower()
+
+numerology_value = 0
+
+name_values = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
+    'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19,
+    't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
+
+for letter in name:
+    if letter in name_values:
+        numerology_value += name_values[letter]
+
+print(f"The numerology value of the name '{name}' is: {numerology_value}")
