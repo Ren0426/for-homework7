@@ -1,0 +1,153 @@
+Part1:
+def main():
+    print("part 1")
+    for i in range(5):
+        print(i * i)
+    for d in [3,1,4,1,5]:
+        print(d, end=" ")
+    for i in range(4):
+        print("Hello")
+    for i in range(5):
+        print(i, 2**i)
+     
+    
+main()
+
+
+Part2:
+result_a = 4.0/10.0 + 3.5*2
+print(result_a)
+
+result_c = abs(4 - 20 // 3) ** 3
+print(result_c)
+
+result_e = 3 * 10 // 3 + 10 % 3
+print(result_e)
+
+
+Part3:
+print("part3")
+print("b")
+print("(n * (n - 1)) / 2")
+print("c")
+print("4 * math.pi * r**2")
+
+
+Part4:
+print("b")
+for i in [1,3,5,7,9]:
+    print(i, ":", i**3)
+    print(i)
+
+print("c")
+x = 2
+y = 10
+for j in range(0, y, x):
+    print(j, end="")
+    print(x + y)
+    print("done")
+
+
+Part5:
+# Get the coordinates from the user
+x1 = float(input("Enter the x-coordinate of the first point: "))
+y1 = float(input("Enter the y-coordinate of the first point: "))
+x2 = float(input("Enter the x-coordinate of the second point: "))
+y2 = float(input("Enter the y-coordinate of the second point: "))
+
+# Calculate the slope
+if x1 == x2:
+    print("The slope is undefined (vertical line)")
+else:
+    slope = (y2 - y1) / (x2 - x1)
+    print(f"The slope of the line through the two points is: {slope}")
+
+
+Part6:
+import math
+
+# Get the coordinates from the user
+x1 = float(input("Enter the x-coordinate of the first point: "))
+y1 = float(input("Enter the y-coordinate of the first point: "))
+x2 = float(input("Enter the x-coordinate of the second point: "))
+y2 = float(input("Enter the y-coordinate of the second point: "))
+
+# Calculate the distance
+distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+# Print the calculated distance
+print(f"The distance between the two points is: {distance}")
+
+
+
+The result:
+Python 3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part1.py =============
+part 1
+0
+1
+4
+9
+16
+3 1 4 1 5 Hello
+Hello
+Hello
+Hello
+0 1
+1 2
+2 4
+3 8
+4 16
+>>> 
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part2.py =============
+7.4
+8
+11
+>>> 
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part3.py =============
+part3
+b
+(n * (n - 1)) / 2
+c
+4 * math.pi * r**2
+>>> 
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part4.py =============
+b
+1 : 1
+1
+3 : 27
+3
+5 : 125
+5
+7 : 343
+7
+9 : 729
+9
+c
+012
+done
+212
+done
+412
+done
+612
+done
+812
+done
+
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part5.py =============
+Enter the x-coordinate of the first point: 3
+Enter the y-coordinate of the first point: 9
+Enter the x-coordinate of the second point: 4
+Enter the y-coordinate of the second point: 7
+The slope of the line through the two points is: -2.0
+
+============= RESTART: /Users/suzukiren/Documents/CS1 HW2 part6.py =============
+Enter the x-coordinate of the first point: 3
+Enter the y-coordinate of the first point: 8
+Enter the x-coordinate of the second point: 1
+Enter the y-coordinate of the second point: 5
+The distance between the two points is: 3.605551275463989
+
