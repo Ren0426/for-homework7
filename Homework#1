@@ -1,0 +1,100 @@
+Part2-1:
+print("Hello, world!")
+print("Hello", "world!")
+
+Part2-2:
+print(3)
+print(3.0)
+
+Part2-3
+print(2+3)
+print(2.0+3.0)
+print("2" + "3")
+
+Part2-4
+print(2 * 3)
+print(2 ** 3)
+
+
+Part2-5
+print(7/3)
+print(2//3)
+
+Part3 
+n = eval(input("How many numbers should I print? "))
+
+x = float(input("Enter a number between 0 and 1: "))
+
+for i in range(n):
+    x = 3.9 * x * (1 - x)
+    print(x)
+
+
+Part4
+
+kilometers = float(input("Enter kilometers: "))
+
+miles = kilometers * 0.62
+
+print(f"{kilometers} kilometers is equal to {miles} miles.")
+
+Part5
+def main():
+    for c in range(0, 101, 10):
+        f = 9/5 * c + 32
+        print("Celsius: ", c, "Fehrenheit:", f)
+
+main()
+
+The result:
+Python 3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+============== RESTART: /Users/suzukiren/Documents/HW1 part2-1.py ==============
+Hello, world!
+Hello World!
+>>> 
+============== RESTART: /Users/suzukiren/Documents/HW1 part2-2.py ==============
+3
+3.0
+>>> 
+============== RESTART: /Users/suzukiren/Documents/HW1 part2-3.py ==============
+5
+5.0
+23
+>>> 
+============== RESTART: /Users/suzukiren/Documents/HW1 part2-4.py ==============
+6
+8
+>>> 
+============== RESTART: /Users/suzukiren/Documents/HW1 part2-5.py ==============
+2.3333333333333335
+2
+>>> 
+=============== RESTART: /Users/suzukiren/Documents/HW1 part3.py ===============
+this program illustrate a chaotic function
+how many numbers should I print? 5
+Enter a number between 0 and 1: 1
+0.0
+0.0
+0.0
+0.0
+0.0
+>>> 
+=============== RESTART: /Users/suzukiren/Documents/HW1 part4.py ===============
+Input kilometers 5
+miles: 3.1
+>>> 
+=============== RESTART: /Users/suzukiren/Documents/HW1 part5.py ===============
+Celsius:  0 Fehrenheit:  32.0
+Celsius:  10 Fehrenheit:  50.0
+Celsius:  20 Fehrenheit:  68.0
+Celsius:  30 Fehrenheit:  86.0
+Celsius:  40 Fehrenheit:  104.0
+Celsius:  50 Fehrenheit:  122.0
+Celsius:  60 Fehrenheit:  140.0
+Celsius:  70 Fehrenheit:  158.0
+Celsius:  80 Fehrenheit:  176.0
+Celsius:  90 Fehrenheit:  194.0
+Celsius:  100 Fehrenheit:  212.0
+
